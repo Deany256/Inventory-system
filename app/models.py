@@ -19,6 +19,9 @@ class Item(db.Model):
     price = db.Column(db.Numeric(10, 2), nullable=False)
     quantity = db.Column(db.Integer, nullable=False)
     date_added = db.Column(db.DateTime, nullable=False, default=db.func.current_timestamp())
+    
+    category = db.relationship('Category', backref=db.backref('items', lazy=True))
+    supplier = db.relationship('Supplier', backref=db.backref('items', lazy=True))
 
 class Order(db.Model):
     id = db.Column(db.Integer, primary_key=True)
