@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Item</title>
+</head>
+<body>
+    <h1>Add Item</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.name.label }} {{ form.name }}
+        </div>
+        <div>
+            {{ form.description.label }} {{ form.description }}
+        </div>
+        <div>
+            {{ form.category_id.label }} {{ form.category_id }}
+        </div>
+        <div>
+            {{ form.supplier_id.label }} {{ form.supplier_id }}
+        </div>
+        <div>
+            {{ form.price.label }} {{ form.price }}
+        </div>
+        <div>
+            {{ form.quantity.label }} {{ form.quantity }}
+        </div>
+        <div>
+            {{ form.submit }}
+        </div>
+    </form>
+</body>
+</html>
